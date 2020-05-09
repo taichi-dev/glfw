@@ -34,6 +34,9 @@
 #include <stdlib.h>
 #include <limits.h>
 
+#if defined(__linux__)
+__asm__(".symver powf,powf@GLIBC_2.2.5");
+#endif
 
 // Lexically compare video modes, used by qsort
 //
